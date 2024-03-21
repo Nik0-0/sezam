@@ -4,6 +4,10 @@ from PIL import Image, ImageDraw, ImageFont
 def generate_image_from_text(text_file, output_image):
     # Get the absolute path to the text file
     text_file = os.path.join(os.path.dirname(__file__), text_file)
+    # Get the absolute path to the font file
+    font_path = os.path.join(os.path.dirname(__file__), "arial.ttf")
+
+ 
     
     # Read text from file
     with open(text_file, 'r') as file:
@@ -15,7 +19,8 @@ def generate_image_from_text(text_file, output_image):
     background_color = (255, 255, 255)  # White
     text_color = (0, 0, 0)  # Black
     font_size = 20
-    font = ImageFont.truetype("arial.ttf", font_size)
+    #font = ImageFont.truetype("arial.ttf", font_size)
+    font = ImageFont.truetype(font_path, font_size)
     
     # Create new image
     image = Image.new("RGB", (image_width, image_height), background_color)
