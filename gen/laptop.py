@@ -41,24 +41,24 @@ def generate_image_from_text_files(text_files, output_image):
 
 # Example usage:
 text_files = {
-    "title.txt": {"x": 50, "y": 50, "font_size": 20, "text_color": (0, 0, 0), "font_file": "arial.ttf"},
-    "desc.txt": {"x": 100, "y": 100, "font_size": 30, "text_color": (255, 0, 0), "font_file": "arial.ttf"},
+    "title.txt": {"x": 960, "y": 85, "font_size": 20, "text_color": (0, 0, 0), "font_file": "arial.ttf"},
+   # "desc.txt": {"x": 100, "y": 100, "font_size": 30, "text_color": (255, 0, 0), "font_file": "arial.ttf"},
     
-    "sub1.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
-    "size.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
+   # "sub1.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
+   # "size.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
 
-    "sub2.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
-    "res.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
-    "rest.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
+   # "sub2.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
+   # "res.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
+   # "rest.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
 
-    "desc1.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
-    "info1.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
+   # "desc1.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
+   # "info1.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
 
-    "desc2.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
-    "info2.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
+   # "desc2.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
+   # "info2.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
 
-    "price.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
+   # "price.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
     
 }  # Dictionary containing text file paths and their properties
-output_image_path = "output_image.png"  # Replace with the desired output image filename
+output_image_path = "laptop.png"  # Replace with the desired output image filename
 generate_image_from_text_files(text_files, output_image_path)
