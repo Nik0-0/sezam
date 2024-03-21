@@ -59,6 +59,8 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
         # Check if the current text file is the one to apply image mapping
         if "title.txt" in os.path.basename(text_file):
             print(f"Text read from title.txt: {text}")  # Debug
+            # Convert everything to lowercases
+            image_mapping_lower = {key.lower(): value for key, value in image_mapping.items()}
             if text in image_mapping:
                 print(f"Detected {text} in {text_file}, applying image mapping...")  # Debug
                 # Get the filename of the corresponding PNG image
