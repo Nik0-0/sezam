@@ -102,7 +102,12 @@ lines_y = [205,390,590,790]  # List of y-coordinates for the lines
 
 image_mapping = {
     "HP": "HP.png",  # Mapping text content to PNG image filename
-    "SAMSUNG": "SAMSUNG.png",  # Add more mappings as needed
+    "SAMSUNG": "SAMSUNG.png",
+    "XIAOMI": "XIAOMI.png",
+    "PHILIPS": "PHILIPS.png",
+    "FINLUX": "FINLUX.png",
+    "TOSHIBA": "TOSHIBA.png",
+    "LG": "LG.png",       # Add more mappings as needed
 }  # Dictionary containing text content and corresponding PNG image filenames
 
 image_data = {
