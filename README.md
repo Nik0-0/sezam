@@ -1,1 +1,1 @@
-# sezam
+# Generator opisówek - Sezam
