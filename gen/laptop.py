@@ -1,8 +1,15 @@
+import os
 from PIL import Image, ImageDraw, ImageFont
 
 def generate_image_from_text(text_file, output_image):
+    # Get the absolute path of the script directory
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    # Construct the absolute path to the text file
+    text_file_path = os.path.join(script_dir, text_file)
+    
     # Read text from file
-    with open(text_file, 'r') as file:
+    with open(text_file_path, 'r') as file:
         text = file.read().strip()
     
     # Set up image parameters
@@ -30,6 +37,6 @@ def generate_image_from_text(text_file, output_image):
     print("Image generated successfully!")
 
 # Example usage:
-text_file_path = "text_file.txt"  # Replace with the path to your text file
+text_file_name = "text_file.txt"  # Replace with the name of your text file
 output_image_path = "output_image.png"  # Replace with the desired output image path
-generate_image_from_text(text_file_path, output_image_path)
+generate_image_from_text(text_file_name, output_image_path)
