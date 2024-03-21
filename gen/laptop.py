@@ -74,8 +74,8 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
 
 # Example usage:
 text_files = {
-    "title.txt": {"x": 70, "y": 70, "font_size": 80, "text_color": (0, 0, 0), "font_file": "arial.ttf"},
-    "desc.txt": {"x": 70, "y": 155, "font_size": 30, "text_color": (255, 0, 0), "font_file": "arial.ttf"},
+    "title.txt": {"x": 170, "y": 70, "font_size": 80, "text_color": (0, 0, 0), "font_file": "arial.ttf"},
+    "desc.txt": {"x": 170, "y": 155, "font_size": 30, "text_color": (255, 0, 0), "font_file": "arial.ttf"},
     
    # "sub1.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
    # "size.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
@@ -101,7 +101,7 @@ image_mapping = {
 }  # Dictionary containing text content and corresponding PNG image filenames
 
 image_data = {
-    "logo.png": {"x": 550, "y": 100, "scale": 0.5},
+    "logo.png": {"x": 500, "y": 60, "scale": 0.3},
 }  # Dictionary containing PNG image file paths and their properties
 
 output_image_path = "laptop.png"  # Replace with the desired output image filename
