@@ -57,9 +57,14 @@ jobs:
          curl -L https://limsezam.ovh/input/selected_option.txt -o gen/selected_option.txt
          
 
-      - name: Generate Images - Small (Laptop)
-        run: python gen/laptop.py # Run your Python script
-
+      - name: Check the style selected
+        run: |
+         if grep -q "option1" gen/selected_option.txt; then
+          python gen/laptop.py
+         else
+          python gen/laptop_alt.py
+         fi
+ 
 
       - name: Upload Small
         uses: actions/upload-artifact@v4
