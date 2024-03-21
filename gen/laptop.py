@@ -27,7 +27,7 @@ def generate_image_from_text(text_file, output_image):
     draw = ImageDraw.Draw(image)
     
     # Calculate text size and position
-    text_width, text_height = draw.textsize(text, font=font)
+    text_width, text_height = font.getsize(text)
     text_x = (image_width - text_width) / 2
     text_y = (image_height - text_height) / 2
     
