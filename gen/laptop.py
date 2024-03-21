@@ -75,7 +75,7 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
 # Example usage:
 text_files = {
     "title.txt": {"x": 70, "y": 70, "font_size": 80, "text_color": (0, 0, 0), "font_file": "arial.ttf"},
-    "desc.txt": {"x": 70, "y": 160, "font_size": 30, "text_color": (255, 0, 0), "font_file": "arial.ttf"},
+    "desc.txt": {"x": 70, "y": 155, "font_size": 30, "text_color": (255, 0, 0), "font_file": "arial.ttf"},
     
    # "sub1.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
    # "size.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
@@ -93,7 +93,7 @@ text_files = {
    # "price.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
 }  # Dictionary containing text file paths and their properties
 
-lines_y = [175]  # List of y-coordinates for the lines
+lines_y = [195]  # List of y-coordinates for the lines
 
 image_mapping = {
     "HP": "HP.png",  # Mapping text content to PNG image filename
@@ -101,7 +101,7 @@ image_mapping = {
 }  # Dictionary containing text content and corresponding PNG image filenames
 
 image_data = {
-    "logo.png": {"x": 550, "y": 100, "scale": 1},
+    "logo.png": {"x": 550, "y": 100, "scale": 0.5},
 }  # Dictionary containing PNG image file paths and their properties
 
 output_image_path = "laptop.png"  # Replace with the desired output image filename
