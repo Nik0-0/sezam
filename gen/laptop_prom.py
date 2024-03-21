@@ -94,7 +94,7 @@ text_files = {
     "text4.txt": {"x": 100, "y": 835, "font_size": 35, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
 
 
-    "promocja.txt": {"x": 50, "y": 1060, "font_size": 70, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-MI.ttf"},
+    "promotion.txt": {"x": 50, "y": 1060, "font_size": 70, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-MI.ttf"},
     "price.txt": {"x": 50, "y": 1150, "font_size": 70, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-M.ttf"},
 
 
