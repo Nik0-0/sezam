@@ -107,7 +107,7 @@ image_mapping = {
 
 image_data = {
     "logo.png": {"x": 500, "y": 82, "scale": 0.4},
-    "tlo.png": {"x": 35, "y": 72, "scale": 1},
+    "tlo1.png": {"x": 35, "y": 72, "scale": 1},
     "tlo.png": {"x": 35, "y": 1150, "scale": 10},
 
 
