@@ -39,5 +39,5 @@ def generate_image_from_text(text_file, output_image):
 
 # Example usage:
 text_file_path = "text_file.txt"  # Replace with the filename of your text file
-output_image_path = "output_image.png"  # Replace with the desired output image filename
+output_image_path = "laptop.png"  # Replace with the desired output image filename
 generate_image_from_text(text_file_path, output_image_path)
