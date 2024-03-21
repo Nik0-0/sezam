@@ -62,9 +62,17 @@ jobs:
          if grep -q "option1" gen/selected_option.txt; then
           python gen/laptop.py
          else
-          python gen/laptop_alt.py
+          
+          if grep -q "option2" gen/selected_option.txt; then
+           python gen/laptop_alt.py
+          else
+           python gen/laptop_prom.py
+          fi
+
          fi
- 
+    # option1 - Klasyczny
+    # option2 - Alternatywny 
+    # option3 - Promocja
 
       - name: Upload Small
         uses: actions/upload-artifact@v4
