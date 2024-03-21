@@ -26,10 +26,9 @@ def generate_image_from_text(text_file, output_image):
     image = Image.new("RGB", (image_width, image_height), background_color)
     draw = ImageDraw.Draw(image)
     
-    # Calculate text size and position
-    text_width, text_height = draw.textsize(text, font=font)
-    text_x = (image_width - text_width) / 2
-    text_y = (image_height - text_height) / 2
+    # Fixed position for the text
+    text_x = 50  # Replace with the desired X-coordinate
+    text_y = 50  # Replace with the desired Y-coordinate
     
     # Draw text on image
     draw.text((text_x, text_y), text, fill=text_color, font=font)
