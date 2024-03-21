@@ -3,8 +3,8 @@ from PIL import Image, ImageDraw, ImageFont
 
 def generate_image_from_text_files(text_files, output_image, lines_y, image_mapping, image_data):
     # Set up image parameters
-    image_width = 400
-    image_height = 200
+    image_width = 870
+    image_height = 1235
     background_color = (255, 255, 255)  # White
 
     # Create new image
