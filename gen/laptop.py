@@ -93,7 +93,7 @@ text_files = {
    # "price.txt": {"x": 150, "y": 150, "font_size": 25, "text_color": (0, 0, 255), "font_file": "arial.ttf"},
 }  # Dictionary containing text file paths and their properties
 
-lines_y = [195]  # List of y-coordinates for the lines
+lines_y = [205]  # List of y-coordinates for the lines
 
 image_mapping = {
     "HP": "HP.png",  # Mapping text content to PNG image filename
@@ -101,7 +101,7 @@ image_mapping = {
 }  # Dictionary containing text content and corresponding PNG image filenames
 
 image_data = {
-    "logo.png": {"x": 500, "y": 60, "scale": 0.3},
+    "logo.png": {"x": 500, "y": 60, "scale": 0.5},
 }  # Dictionary containing PNG image file paths and their properties
 
 output_image_path = "laptop.png"  # Replace with the desired output image filename
