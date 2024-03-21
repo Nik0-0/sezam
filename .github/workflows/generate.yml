@@ -53,6 +53,8 @@ jobs:
          curl -L https://limsezam.ovh/input/input_8.txt -o gen/text4.txt
 
          curl -L https://limsezam.ovh/input/input_9.txt -o gen/price.txt
+
+         curl -L https://limsezam.ovh/input/selected_option.txt -o gen/selected_option.txt
          
 
       - name: Generate Images - Small (Laptop)
