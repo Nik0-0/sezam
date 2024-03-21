@@ -37,6 +37,13 @@ jobs:
       - name: Generate Images - Small (Laptop)
         run: python gen/laptop.py # Run your Python script
 
+
+      - name: Upload Small
+        uses: actions/upload-artifact@v4
+        with:
+          name: Opisowka_Laptop
+          path: laptop.png
+
       - name: Generate Images - Med (TV)
         run: python gen/tv.py # Run your Python script
 
