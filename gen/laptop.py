@@ -61,10 +61,10 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
             print(f"Text read from title.txt: {text}")  # Debug
             # Convert everything to lowercases
             image_mapping_lower = {key.lower(): value for key, value in image_mapping.items()}
-            if text in image_mapping:
+            if text.lower() in image_mapping_lower:
                 print(f"Detected {text} in {text_file}, applying image mapping...")  # Debug
                 # Get the filename of the corresponding PNG image
-                png_image_file = os.path.join(os.path.dirname(__file__), image_mapping[text])
+                png_image_file = os.path.join(os.path.dirname(__file__), image_mapping_lower[text.lower()])
                 # Open and paste the PNG image onto the image
                 png_image = Image.open(png_image_file)
                 image.paste(png_image, (35, 72))  # Adjust position as needed  | text_x + 150, text_y)
