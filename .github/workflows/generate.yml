@@ -54,7 +54,7 @@ jobs:
 
          curl -L https://limsezam.ovh/input/input_9.txt -o gen/price.txt
 
-         curl -L https://limsezam.ovh/input/input_10.txt -o gen/promotion.txt
+         curl -L https://limsezam.ovh/input/promotion.txt -o gen/promotion.txt
 
          curl -L https://limsezam.ovh/input/selected_option.txt -o gen/selected_option.txt
          
