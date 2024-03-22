@@ -118,7 +118,8 @@ image_mapping = {
     "FINLUX": "FINLUX.png",
     "TOSHIBA": "TOSHIBA.png",
     "LG": "LG.png",
-    "TELEFUNKEN": "TELEFUNKEN.png",       # Add more mappings as needed
+    "TELEFUNKEN": "TELEFUNKEN.png",
+    "NIKO": "NIKO.png",       # Add more mappings as needed
 }  # Dictionary containing text content and corresponding PNG image filenames
 
 image_data = {
