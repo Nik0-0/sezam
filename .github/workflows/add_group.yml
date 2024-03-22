@@ -32,7 +32,7 @@ jobs:
       - name: Download File
         run: |
          curl -L https://limsezam.ovh/generated/laptop.png -o gen/add.png
-         curl -L https://limsezam.ovh/generated/counter.txt -o gen/counter.txt
+         curl -L https://limsezam.ovh/generated_pages/counter.txt -o gen/counter.txt
          
 
       - name: Import to page
@@ -64,6 +64,7 @@ jobs:
 
             
   Generate_M:
+    needs: [Generate_S]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -77,7 +78,7 @@ jobs:
       - name: Download File
         run: |
          curl -L https://limsezam.ovh/generated/tv.png -o gen/add.png
-         curl -L https://limsezam.ovh/generated/counter2.txt -o gen/counter2.txt
+         curl -L https://limsezam.ovh/generated_pages/counter2.txt -o gen/counter2.txt
          
 
       - name: Import to page
