@@ -59,7 +59,7 @@ jobs:
          curl -L https://limsezam.ovh/input/selected_option.txt -o gen/selected_option.txt
          
 
-      - name: Check the style selected
+      - name: Generate Images - Small (Laptop)
         run: |
          if grep -q "option1" gen/selected_option.txt; then
           python gen/laptop.py
@@ -106,7 +106,31 @@ jobs:
 
 
       - name: Generate Images - Med (TV)
-        run: python gen/tv.py # Run your Python script
+        run: python gen/tv.py
+
+      - name: Upload Med
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+            username: ${{ secrets.SFTP_USERNAME }}
+            server: ${{ secrets.SFTP_SERVER }}
+            port: 22
+            local_path: './tv.png'
+            remote_path: '/public/generated/tv.png'
+            sftp_only: true
+            password: ${{ secrets.SFTP_PASSWORD }}
+
 
       - name: Generate Images - Big (A4)
-        run: python gen/a4.py # Run your Python script
+        run: python gen/a4.py
+
+      - name: Upload A4
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+            username: ${{ secrets.SFTP_USERNAME }}
+            server: ${{ secrets.SFTP_SERVER }}
+            port: 22
+            local_path: './a4.png'
+            remote_path: '/public/generated/a4.png'
+            sftp_only: true
+            password: ${{ secrets.SFTP_PASSWORD }}
+
