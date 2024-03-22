@@ -11,8 +11,7 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
     image = Image.new("RGB", (image_width, image_height), background_color)
     draw = ImageDraw.Draw(image)
     
-    # Draw outline for better cutting etc...
-    draw.rectangle([(0, 0), (image_width - 1, image_height - 1)], outline=(0, 0, 0))
+
 
     # Paste PNG images specified in the image_data dictionary
     for image_file, image_properties in image_data.items():
@@ -75,6 +74,9 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
     # Draw multiple horizontal lines
     for line_y in lines_y:
         draw.line([(0, line_y), (image_width, line_y)], fill=(0, 0, 0), width=2)  # Adjust line properties as needed
+
+    # Draw outline for better cutting etc...
+    draw.rectangle([(0, 0), (image_width - 1, image_height - 1)], outline=(0, 0, 0))
 
     # Save image
     image.save(output_image)
