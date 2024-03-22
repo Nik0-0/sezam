@@ -39,7 +39,7 @@ def add_image_to_page_and_save():
     # Calculate the position for the new image
     row = counter // 2
     col = counter % 2
-    position = (50 + col * 1240, 50 + row * 1754)
+    position = (20 + col * 1240, 20 + row * 1754)
 
     # Paste the image onto the A4 page
     a4_page.paste(image, position)
