@@ -32,7 +32,7 @@ jobs:
       - name: Download File
         run: |
          curl -L https://limsezam.ovh/generated/laptop.png -o gen/add.png
-         curl -L https://limsezam.ovh/generated_pages/laptop_list.png-o gen/a4_page.png
+         curl -L https://limsezam.ovh/generated_pages/laptop_list.png -o gen/a4_page.png
          curl -L https://limsezam.ovh/generated_pages/counter.txt -o gen/counter.txt
          
 
@@ -79,7 +79,7 @@ jobs:
       - name: Download File
         run: |
          curl -L https://limsezam.ovh/generated/tv.png -o gen/add.png
-         curl -L https://limsezam.ovh/generated_pages/tv_list.png-o gen/a4_page.png
+         curl -L https://limsezam.ovh/generated_pages/tv_list.png -o gen/a4_page.png
          curl -L https://limsezam.ovh/generated_pages/counter2.txt -o gen/counter2.txt
          
 
