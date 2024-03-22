@@ -10,6 +10,9 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
     # Create new image
     image = Image.new("RGB", (image_width, image_height), background_color)
     draw = ImageDraw.Draw(image)
+    
+    # Draw outline for better cutting etc...
+    draw.rectangle([(0, 0), (image_width - 1, image_height - 1)], outline=(0, 0, 0))
 
     # Paste PNG images specified in the image_data dictionary
     for image_file, image_properties in image_data.items():
