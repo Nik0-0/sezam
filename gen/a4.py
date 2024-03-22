@@ -13,6 +13,6 @@ def upscale_image(input_image_path, output_image_path, target_size):
 
 input_image_path = "laptop.jpg"
 output_image_path = "a4.jpg"
-target_size = (800, 600)
+target_size = (2480, 3508)
 
 upscale_image(input_image_path, output_image_path, target_size)
