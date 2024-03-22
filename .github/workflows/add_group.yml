@@ -65,7 +65,7 @@ jobs:
 
             
   Generate_M:
-    needs: [Generate_S]
+    #needs: [Generate_S]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -80,7 +80,7 @@ jobs:
         run: |
          curl -L https://limsezam.ovh/generated/tv.png -o gen/add.png
          curl -L https://limsezam.ovh/generated_pages/tv_list.png -o gen/a4_page.png
-         curl -L https://limsezam.ovh/generated_pages/counter2.txt -o gen/counter2.txt
+         curl -L https://limsezam.ovh/generated_pages/counter2.txt -o gen/counter.txt
          
 
       - name: Import to page
