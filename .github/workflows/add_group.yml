@@ -101,7 +101,7 @@ jobs:
             username: ${{ secrets.SFTP_USERNAME }}
             server: ${{ secrets.SFTP_SERVER }}
             port: 22
-            local_path: './gen/counter2.txt'
+            local_path: './gen/counter.txt'
             remote_path: '/public/generated_pages/counter2.txt'
             sftp_only: true
             password: ${{ secrets.SFTP_PASSWORD }}
