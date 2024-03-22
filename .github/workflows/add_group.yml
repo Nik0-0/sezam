@@ -45,7 +45,7 @@ jobs:
             username: ${{ secrets.SFTP_USERNAME }}
             server: ${{ secrets.SFTP_SERVER }}
             port: 22
-            local_path: './a4_page.png'
+            local_path: './gen/a4_page.png'
             remote_path: '/public/generated_pages/laptop_list.png'
             sftp_only: true
             password: ${{ secrets.SFTP_PASSWORD }}
@@ -92,7 +92,7 @@ jobs:
             username: ${{ secrets.SFTP_USERNAME }}
             server: ${{ secrets.SFTP_SERVER }}
             port: 22
-            local_path: './a4_page.png'
+            local_path: './gen/a4_page.png'
             remote_path: '/public/generated_pages/tv_list.png'
             sftp_only: true
             password: ${{ secrets.SFTP_PASSWORD }}
