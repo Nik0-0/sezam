@@ -32,6 +32,7 @@ jobs:
       - name: Download File
         run: |
          curl -L https://limsezam.ovh/generated/laptop.png -o gen/add.png
+         curl -L https://limsezam.ovh/generated/counter.txt -o gen/counter.txt
          
 
       - name: Import to page
@@ -45,6 +46,17 @@ jobs:
             port: 22
             local_path: './a4_page.png'
             remote_path: '/public/generated_pages/laptop_list.png'
+            sftp_only: true
+            password: ${{ secrets.SFTP_PASSWORD }}
+
+      - name: Sync
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+            username: ${{ secrets.SFTP_USERNAME }}
+            server: ${{ secrets.SFTP_SERVER }}
+            port: 22
+            local_path: './counter.txt'
+            remote_path: '/public/generated_pages/counter.txt'
             sftp_only: true
             password: ${{ secrets.SFTP_PASSWORD }}
 
@@ -65,6 +77,7 @@ jobs:
       - name: Download File
         run: |
          curl -L https://limsezam.ovh/generated/tv.png -o gen/add.png
+         curl -L https://limsezam.ovh/generated/counter2.txt -o gen/counter2.txt
          
 
       - name: Import to page
@@ -78,5 +91,16 @@ jobs:
             port: 22
             local_path: './a4_page.png'
             remote_path: '/public/generated_pages/tv_list.png'
+            sftp_only: true
+            password: ${{ secrets.SFTP_PASSWORD }}
+
+      - name: Sync
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+            username: ${{ secrets.SFTP_USERNAME }}
+            server: ${{ secrets.SFTP_SERVER }}
+            port: 22
+            local_path: './counter2.txt'
+            remote_path: '/public/generated_pages/counter2.txt'
             sftp_only: true
             password: ${{ secrets.SFTP_PASSWORD }}
