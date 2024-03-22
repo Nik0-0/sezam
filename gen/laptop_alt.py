@@ -88,13 +88,13 @@ text_files = {
     "desc.txt": {"x": 170, "y": 155, "font_size": 30, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
 
     "sub1.txt": {"x": 25, "y": 215, "font_size": 70, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-M.ttf"},
-    "text1.txt": {"x": 27, "y": 300, "font_size": 35, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
+    "text1.txt": {"x": 27, "y": 300, "font_size": 45, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
 
     "sub2.txt": {"x": 450, "y": 215, "font_size": 70, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-M.ttf"},
-    "text2.txt": {"x": 452, "y": 300, "font_size": 35, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
+    "text2.txt": {"x": 452, "y": 300, "font_size": 45, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
 
     "sub3.txt": {"x": 25, "y": 605, "font_size": 70, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-M.ttf"},
-    "text3.txt": {"x": 27, "y": 700, "font_size": 35, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
+    "text3.txt": {"x": 27, "y": 700, "font_size": 45, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
 
     "extra5.txt": {"x": 450, "y": 605, "font_size": 70, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-M.ttf"},
     "extra5_desc.txt": {"x": 452, "y": 700, "font_size": 45, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
