@@ -32,7 +32,7 @@ def add_image_to_page_and_save():
         counter = 0
 
     # If the counter is 5, clear the page and reset the counter
-    if counter == 5:
+    if counter == 4:
         a4_page = Image.new("RGB", (2480, 3508), color="white")
         counter = 0
 
