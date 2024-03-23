@@ -44,6 +44,8 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
             text = file.read().strip()
         # Escape html chars if theres one
         text = html.unescape(text)
+        # Remove the leftover symbols
+        text = text.replace('\\"', '"')
 
         # Set text properties
         font_size = properties.get('font_size', 20)
