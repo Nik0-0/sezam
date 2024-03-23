@@ -119,7 +119,8 @@ image_mapping = {
     "TOSHIBA": "TOSHIBA.png",
     "LG": "LG.png",
     "TELEFUNKEN": "TELEFUNKEN.png",
-    "NIKO": "NIKO.png",       # Add more mappings as needed
+    "NIKO": "NIKO.png",
+    "HISENSE": "HISENSE.png", 
 }  # Dictionary containing text content and corresponding PNG image filenames
 
 image_data = {
