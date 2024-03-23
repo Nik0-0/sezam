@@ -38,8 +38,8 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
         # Get the absolute path to the text file
         text_file = os.path.join(os.path.dirname(__file__), text_file)
 
-        # Read text from file
-        with open(text_file, 'r') as file:
+        # Read text from file with utf-8 encoding
+        with open(text_file, 'r', encoding='utf-8') as file:
             text = file.read().strip()
 
         # Set text properties
