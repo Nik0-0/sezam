@@ -1,139 +1,87 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Wygeneruj
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
   repository_dispatch:
     types: [ "generuj" ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  prepare_files:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      # Setup Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x' # Choose the appropriate Python version
+          python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install Pillow # Install Pillow library
+        run: pip install Pillow
 
       - name: Download Files
         run: |
-         curl -L https://limsezam.ovh/input/input_0.txt -o gen/title.txt
-         curl -L https://limsezam.ovh/input/input_1.txt -o gen/desc.txt
+          curl -L https://limsezam.ovh/input/input_0.txt -o gen/title.txt && \
+          curl -L https://limsezam.ovh/input/input_1.txt -o gen/desc.txt && \
+          curl -L https://limsezam.ovh/input/input_2.txt -o gen/sub1.txt && \
+          curl -L https://limsezam.ovh/input/input_3.txt -o gen/text1.txt && \
+          curl -L https://limsezam.ovh/input/input_4.txt -o gen/sub2.txt && \
+          curl -L https://limsezam.ovh/input/input_5.txt -o gen/text2.txt && \
+          curl -L https://limsezam.ovh/input/input_6.txt -o gen/sub3.txt && \
+          curl -L https://limsezam.ovh/input/input_7.txt -o gen/text3.txt && \
+          curl -L https://limsezam.ovh/input/input_8.txt -o gen/text4.txt && \
+          curl -L https://limsezam.ovh/input/price.txt -o gen/price.txt && \
+          curl -L https://limsezam.ovh/input/promotion.txt -o gen/promotion.txt && \
+          curl -L https://limsezam.ovh/input/selected_option.txt -o gen/selected_option.txt && \
+          curl -L https://limsezam.ovh/input/extra5.txt -o gen/extra5.txt && \
+          curl -L https://limsezam.ovh/input/extra5_desc.txt -o gen/extra5_desc.txt
 
-         curl -L https://limsezam.ovh/input/input_2.txt -o gen/sub1.txt
-         curl -L https://limsezam.ovh/input/input_3.txt -o gen/text1.txt
+  generate_images:
+    needs: prepare_files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-         curl -L https://limsezam.ovh/input/input_4.txt -o gen/sub2.txt
-         curl -L https://limsezam.ovh/input/input_5.txt -o gen/text2.txt
-
-         curl -L https://limsezam.ovh/input/input_6.txt -o gen/sub3.txt
-         curl -L https://limsezam.ovh/input/input_7.txt -o gen/text3.txt
-
-         curl -L https://limsezam.ovh/input/input_8.txt -o gen/text4.txt
-
-         curl -L https://limsezam.ovh/input/price.txt -o gen/price.txt
-
-         curl -L https://limsezam.ovh/input/promotion.txt -o gen/promotion.txt
-
-         curl -L https://limsezam.ovh/input/selected_option.txt -o gen/selected_option.txt
-
-         curl -L https://limsezam.ovh/input/extra5.txt -o gen/extra5.txt
-         curl -L https://limsezam.ovh/input/extra5_desc.txt -o gen/extra5_desc.txt
-         
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
       - name: Generate Images - Small (Laptop)
-        run: |
-         if grep -q "option1" gen/selected_option.txt; then
-          python gen/laptop.py
-         else
-          
-          if grep -q "option2" gen/selected_option.txt; then
-           python gen/laptop_alt.py
-          else
-           python gen/laptop_prom.py
-          fi
-
-         fi
-    # option1 - Klasyczny
-    # option2 - Alternatywny 
-    # option3 - Promocja
-
-      - name: Upload Small
-        uses: actions/upload-artifact@v4
-        with:
-          name: Opisowka_Laptop
-          path: laptop.png
-
-
-      - name: Upload Small
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with:
-            username: ${{ secrets.SFTP_USERNAME }}
-            server: ${{ secrets.SFTP_SERVER }}
-            port: 22
-            local_path: './laptop.png'
-            remote_path: '/public/generated/laptop.png'
-            sftp_only: true
-            password: ${{ secrets.SFTP_PASSWORD }}
-
-
-
-
-
-
-
-
-
-
-
+        run: python gen/laptop.py
+        continue-on-error: true
 
       - name: Generate Images - Med (TV)
         run: python gen/tv.py
-
-      - name: Upload Med
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with:
-            username: ${{ secrets.SFTP_USERNAME }}
-            server: ${{ secrets.SFTP_SERVER }}
-            port: 22
-            local_path: './tv.png'
-            remote_path: '/public/generated/tv.png'
-            sftp_only: true
-            password: ${{ secrets.SFTP_PASSWORD }}
-
+        continue-on-error: true
 
       - name: Generate Images - Big (A4)
         run: python gen/a4.py
+        continue-on-error: true
 
-      - name: Upload A4
+  upload_images:
+    needs: generate_images
+    runs-on: ubuntu-latest
+    steps:
+      - name: Upload Images
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-            username: ${{ secrets.SFTP_USERNAME }}
-            server: ${{ secrets.SFTP_SERVER }}
-            port: 22
-            local_path: './a4.png'
-            remote_path: '/public/generated/a4.png'
-            sftp_only: true
-            password: ${{ secrets.SFTP_PASSWORD }}
-
+          username: ${{ secrets.SFTP_USERNAME }}
+          server: ${{ secrets.SFTP_SERVER }}
+          port: 22
+          sftp_only: true
+          password: ${{ secrets.SFTP_PASSWORD }}
+          local_path: |
+            laptop.png
+            tv.png
+            a4.png
+          remote_path: |
+            /public/generated/laptop.png
+            /public/generated/tv.png
+            /public/generated/a4.png
