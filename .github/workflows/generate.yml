@@ -122,7 +122,11 @@ jobs:
 
          if grep -q "canalp_1" gen/selected_option.txt; then
           python gen/canalp_1.py
-         fi         
+         fi
+
+         if grep -q "canalp_2" gen/selected_option.txt; then
+          python gen/canalp_2.py
+         fi  
     # option1 - Klasyczny
     # option2 - Alternatywny 
     # option3 - Promocja
