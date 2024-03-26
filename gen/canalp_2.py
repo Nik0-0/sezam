@@ -26,8 +26,8 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
             png_image = png_image.resize((int(png_image.width * scale), int(png_image.height * scale)), Image.LANCZOS)  # Add Image.ANTIALIAS for better quality when downsizing
         else:
             # Define the target size for scaling
-            target_width = 200  # Adjust this value to your desired width
-            target_height = 200  # Adjust this value to your desired height
+            target_width = 900  # Adjust this value to your desired width
+            target_height = 1200  # Adjust this value to your desired height
             # Calculate the scaling factor for both dimensions
             width_scale = target_width / png_image.width
             height_scale = target_height / png_image.height
@@ -139,7 +139,7 @@ image_mapping = {
 }  # Dictionary containing text content and corresponding PNG image filenames
 
 image_data = {
-    "test.png": {"x": 0, "y": 255, "scale": 0.28},
+    "test.png": {"x": 0, "y": 255},
     "canal+/canalp_2.png": {"x": 0, "y": 0, "scale": 1},
 
   #  "tlo.png": {"x": 35, "y": 1150, "scale": 10},
