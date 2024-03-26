@@ -38,6 +38,8 @@ jobs:
 
       - name: Download Files
         run: |
+         curl -L https://limsezam.ovh/input/selected_option.txt -o gen/selected_option.txt
+        
          if grep -q "canalp" gen/selected_option.txt; then
 
           curl -L https://limsezam.ovh/input/c_title.txt -o gen/title.txt
@@ -49,7 +51,7 @@ jobs:
           curl -L https://limsezam.ovh/input/c3.txt -o gen/sub3.txt
           curl -L https://limsezam.ovh/input/c4.txt -o gen/text3.txt
 
-        else
+          else
 
          curl -L https://limsezam.ovh/input/input_0.txt -o gen/title.txt
          curl -L https://limsezam.ovh/input/input_1.txt -o gen/desc.txt
@@ -69,8 +71,7 @@ jobs:
 
          curl -L https://limsezam.ovh/input/promotion.txt -o gen/promotion.txt
 
-         curl -L https://limsezam.ovh/input/selected_option.txt -o gen/selected_option.txt
-
+         
          curl -L https://limsezam.ovh/input/extra5.txt -o gen/extra5.txt
          curl -L https://limsezam.ovh/input/extra5_desc.txt -o gen/extra5_desc.txt
 
