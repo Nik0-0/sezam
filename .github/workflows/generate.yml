@@ -66,7 +66,7 @@ jobs:
 
          fi
         
-         if grep -q "canalp" gen/selected_option.txt; then
+         if grep -q "canalp_0" gen/selected_option.txt; then
 
          echo "Canal | CLASSIC style!"
 
