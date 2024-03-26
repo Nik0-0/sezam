@@ -81,9 +81,13 @@ jobs:
 
           curl -L https://limsezam.ovh/input/price.txt -o gen/price.txt
 
-          else
+         fi
 
-          echo "Normal render"
+
+
+         if grep -q "option" gen/selected_option.txt; then
+
+         echo "Normal render"
 
          curl -L https://limsezam.ovh/input/input_0.txt -o gen/title.txt
          curl -L https://limsezam.ovh/input/input_1.txt -o gen/desc.txt
