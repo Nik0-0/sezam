@@ -1,0 +1,124 @@
+<form method="post" action="">
+    <label for="select_option">Styl:</label><br>
+    <select id="select_option" name="select_option" style="width: 200px;" onchange="showAdditionalInputs()">
+        <option value="option1">Klasyczny</option>
+        <option value="option3">Klasyczny - Promo</option>	
+        <option value="option2">Alternatywny</option>
+		
+        <option value="option4">Mini</option>
+        <option value="option5">Telefony</option>
+        
+        <option value="canalp">Canal+</option>
+    </select><br>
+	
+
+	
+	<div id="kc_fuf" style="display: block;">
+
+
+
+	<div id="extra_info" style="display: none;">
+		<p><em>W tym Stylu tekst jest rozmieszczony tak<br>
+		aby dostarczyć więcej miejsca na informacje itp.</em></p>
+	</div>
+    <div id="additionalInputs" style="display: none;">
+	
+		<h1>  </h1>
+        <label for="promotion">Treść promocji (np zwyczajnie "Promocja!"):</label><br>
+        <input type="text" id="promotion" name="promotion" style="width: 200px;"><br>
+		<p><em>Notka: Jeśli wypełniłeś pole "Reszta Opisu" ostatnie dwie linijki mogą się nakładać / zostać ucięte!</em></p>
+
+	</div>
+	
+	<h1>  </h1>	
+    <label for="user_input1">Tytuł (np HP):</label><br>
+    <input type="text" id="user_input1" name="user_input[]" style="width: 200px;"><br>
+	<p><em>Wpisując popularną nazwe marki np Samsung wybierzemy automatycznie logo.</em></p>
+    <label for="user_input2">Podtytuł (np MODEL ABC123):</label><br>
+    <input type="text" id="user_input2" name="user_input[]" style="width: 200px;"><br>
+    <h2>  </h2>
+    <label for="user_input3">Wyróżnienie 1:</label><br>
+    <input type="text" id="user_input3" name="user_input[]" style="width: 200px;"><br>
+    <label for="user_input4">Opis 1:</label><br>
+    <textarea id="user_input4" name="user_input[]" rows="2" cols="35"></textarea><br>
+    <h2>  </h2>
+    <label for="user_input5">Wyróżnienie 2:</label><br>
+    <input type="text" id="user_input5" name="user_input[]" style="width: 200px;"><br>
+    <label for="user_input6">Opis 2:</label><br>
+    <textarea id="user_input6" name="user_input[]" rows="2" cols="35"></textarea><br>
+    <h2>  </h2>
+    <label for="user_input7">Wyróżnienie 3:</label><br>
+    <input type="text" id="user_input7" name="user_input[]" style="width: 200px;"><br>
+    <label for="user_input8">Opis 3:</label><br>
+    <textarea id="user_input8" name="user_input[]" rows="2" cols="35"></textarea><br>
+    <h2>  </h2>
+	
+    <div id="extra_in" style="display: none;">
+	
+
+		<label for="extra5">Wyróżnienie 4:</label><br>
+		<input type="text" id="extra5" name="extra5" style="width: 200px;"><br>
+		<label for="extra5_desc">Opis 4:</label><br>
+		<textarea id="extra5_desc" name="extra5_desc" rows="2" cols="35"></textarea><br>
+		<h2>  </h2>
+	
+	</div>
+	
+	
+	
+    <div id="big_input" style="display: block;">
+	
+    <label for="user_input9">Reszta Opisu:</label><br>
+    <textarea id="user_input9" name="user_input[]" rows="9" cols="35"></textarea><br>
+    <h2>  </h2>
+	
+	</div>
+    </div>
+	
+	
+
+
+
+	<div id="canal_input" style="display: none;">
+
+
+
+
+            <p><em>Styl Canal+.</em></p>
+        
+        <h1>  </h1>	
+        <label for="user_input1">Tytuł:</label><br>
+        <input type="text" id="c_title" name="c_title" style="width: 200px;"><br>
+      
+        <label for="user_input2">Podtytuł:</label><br>
+        <input type="text" id="c_subtitle" name="c_subtitle" style="width: 200px;"><br>
+        <h2>  </h2>
+
+        <label for="c1">Wyróżnienie 1 (Nad Ceną):</label><br>
+        <input type="text" id="c1" name="c1" style="width: 200px;"><br>
+        <label for="c2">Opis 1:</label><br>
+        <textarea id="c2" name="c2" rows="2" cols="35"></textarea><br>
+
+        <h2>  </h2>
+        <label for="c3">Wyróżnienie 2 (Pod Ceną):</label><br>
+        <input type="text" id="c3" name="c3" style="width: 200px;"><br>
+        <label for="user_input8">Opis 3:</label><br>
+        <textarea id="c4" name="c4" rows="2" cols="35"></textarea><br>
+        <h2>  </h2>
+
+        
+        </div>
+
+
+
+
+
+
+
+
+	<h1>  </h1>	
+    <label for="price">Cena:</label><br>
+    <input type="text" id="price" name="price" style="width: 200px;"><br>
+	
+    <input type="submit" name="submit" value="Wygeneruj">
+</form>
