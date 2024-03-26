@@ -44,11 +44,11 @@ jobs:
 
          curl -L https://limsezam.ovh/input/temp.png -o gen/test.png
 
-         curl -L https://limsezam.ovh/input/c1.txt -o gen/sub1.txt
-         curl -L https://limsezam.ovh/input/c2.txt -o gen/text1.txt
+         curl -L https://limsezam.ovh/input/c1_i.txt -o gen/sub1.txt
+         curl -L https://limsezam.ovh/input/c2_i.txt -o gen/text1.txt
 
-         curl -L https://limsezam.ovh/input/c3.txt -o gen/sub3.txt
-         curl -L https://limsezam.ovh/input/c4.txt -o gen/text3.txt
+         curl -L https://limsezam.ovh/input/c3_i.txt -o gen/sub3.txt
+         curl -L https://limsezam.ovh/input/c4_i.txt -o gen/text3.txt
 
          fi
 
@@ -67,11 +67,11 @@ jobs:
           curl -L https://limsezam.ovh/input/c_title.txt -o gen/title.txt
           curl -L https://limsezam.ovh/input/c_subtitle.txt -o gen/desc.txt
 
-          curl -L https://limsezam.ovh/input/c1.txt -o gen/sub1.txt
-          curl -L https://limsezam.ovh/input/c2.txt -o gen/text1.txt
+          curl -L https://limsezam.ovh/input/c1_c.txt -o gen/sub1.txt
+          curl -L https://limsezam.ovh/input/c2_c.txt -o gen/text1.txt
 
-          curl -L https://limsezam.ovh/input/c3.txt -o gen/sub3.txt
-          curl -L https://limsezam.ovh/input/c4.txt -o gen/text3.txt
+          curl -L https://limsezam.ovh/input/c3_c.txt -o gen/sub3.txt
+          curl -L https://limsezam.ovh/input/c4_c.txt -o gen/text3.txt
 
           else
 
