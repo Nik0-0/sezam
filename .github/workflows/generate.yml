@@ -38,6 +38,19 @@ jobs:
 
       - name: Download Files
         run: |
+         if grep -q "canalp" gen/selected_option.txt; then
+
+          curl -L https://limsezam.ovh/input/c_title.txt -o gen/title.txt
+          curl -L https://limsezam.ovh/input/c_subtitle.txt -o gen/desc.txt
+
+          curl -L https://limsezam.ovh/input/c1.txt -o gen/sub1.txt
+          curl -L https://limsezam.ovh/input/c2.txt -o gen/text1.txt
+
+          curl -L https://limsezam.ovh/input/c3.txt -o gen/sub3.txt
+          curl -L https://limsezam.ovh/input/c4.txt -o gen/text3.txt
+
+        else
+
          curl -L https://limsezam.ovh/input/input_0.txt -o gen/title.txt
          curl -L https://limsezam.ovh/input/input_1.txt -o gen/desc.txt
 
@@ -61,16 +74,7 @@ jobs:
          curl -L https://limsezam.ovh/input/extra5.txt -o gen/extra5.txt
          curl -L https://limsezam.ovh/input/extra5_desc.txt -o gen/extra5_desc.txt
 
-         if grep -q "canalp" gen/selected_option.txt; then
 
-          curl -L https://limsezam.ovh/input/c_title.txt -o gen/title.txt
-          curl -L https://limsezam.ovh/input/c_subtitle.txt -o gen/desc.txt
-
-          curl -L https://limsezam.ovh/input/c1.txt -o gen/sub1.txt
-          curl -L https://limsezam.ovh/input/c2.txt -o gen/text1.txt
-
-          curl -L https://limsezam.ovh/input/c3.txt -o gen/sub3.txt
-          curl -L https://limsezam.ovh/input/c4.txt -o gen/text3.txt
 
          fi
          

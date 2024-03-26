@@ -90,8 +90,8 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
 
 # Example usage:
 text_files = {
-    "title.txt": {"x": 70, "y": 50, "font_size": 80, "text_color": (255, 255, 255), "font_file": "canal+/canal1.ttf"},
-    "desc.txt": {"x": 70, "y": 155, "font_size": 40, "text_color": (255, 255, 255), "font_file": "us_heavy.otf"},
+    "title.txt": {"x": 50, "y": 50, "font_size": 80, "text_color": (255, 255, 255), "font_file": "canal+/canal1.ttf"},
+    "desc.txt": {"x": 50, "y": 155, "font_size": 40, "text_color": (255, 255, 255), "font_file": "us_heavy.otf"},
 
     "sub1.txt": {"x": 100, "y": 275, "font_size": 60, "text_color": (255, 255, 255), "font_file": "canal+/canal1.ttf"},
     "text1.txt": {"x": 100, "y": 345, "font_size": 45, "text_color": (255, 255, 255), "font_file": "canal+/canal1.ttf"},
@@ -103,7 +103,7 @@ text_files = {
     "default_1.txt": {"x": 680, "y": 825, "font_size": 40, "text_color": (255, 255, 255), "font_file": "fonts/Ubuntu-L.ttf"},
 
     "sub3.txt": {"x": 100, "y": 1005, "font_size": 70, "text_color": (255, 255, 255), "font_file": "canal+/canal1.ttf"},
-    "text3.txt": {"x": 100, "y": 1105, "font_size": 45, "text_color": (255, 255, 255), "font_file": "us_heavy.otf"},
+    "text3.txt": {"x": 100, "y": 1095, "font_size": 45, "text_color": (255, 255, 255), "font_file": "us_heavy.otf"},
 
 
 
