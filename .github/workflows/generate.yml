@@ -42,6 +42,8 @@ jobs:
 
          if grep -q "canalp_2" gen/selected_option.txt; then
 
+         echo "Canal | IMG style!"
+
          curl -L https://limsezam.ovh/input/temp.png -o gen/test.png
 
          curl -L https://limsezam.ovh/input/c1_i.txt -o gen/sub1.txt
@@ -54,6 +56,8 @@ jobs:
 
          if grep -q "canalp_1" gen/selected_option.txt; then
 
+         echo "Canal | MODERN style!"
+
          curl -L https://limsezam.ovh/input/c1.txt -o gen/sub1.txt
          curl -L https://limsezam.ovh/input/c2.txt -o gen/text1.txt
 
@@ -63,6 +67,8 @@ jobs:
          fi
         
          if grep -q "canalp" gen/selected_option.txt; then
+
+         echo "Canal | CLASSIC style!"
 
           curl -L https://limsezam.ovh/input/c_title.txt -o gen/title.txt
           curl -L https://limsezam.ovh/input/c_subtitle.txt -o gen/desc.txt
@@ -76,6 +82,8 @@ jobs:
           curl -L https://limsezam.ovh/input/price.txt -o gen/price.txt
 
           else
+
+          echo "Normal render"
 
          curl -L https://limsezam.ovh/input/input_0.txt -o gen/title.txt
          curl -L https://limsezam.ovh/input/input_1.txt -o gen/desc.txt
