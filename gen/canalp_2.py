@@ -12,8 +12,6 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
     image = Image.new("RGBA", (image_width, image_height), background_color)
     draw = ImageDraw.Draw(image)
     
-
-
     # Paste PNG images specified in the image_data dictionary
     for image_file, image_properties in image_data.items():
         # Get the absolute path to the image file
@@ -25,7 +23,18 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
         # Resize the PNG image if specified
         if 'scale' in image_properties:
             scale = image_properties['scale']
-            png_image = png_image.resize((int(png_image.width * scale), int(png_image.height * scale)))
+            png_image = png_image.resize((int(png_image.width * scale), int(png_image.height * scale)), Image.LANCZOS)  # Add Image.ANTIALIAS for better quality when downsizing
+        else:
+            # Define the target size for scaling
+            target_width = 200  # Adjust this value to your desired width
+            target_height = 200  # Adjust this value to your desired height
+            # Calculate the scaling factor for both dimensions
+            width_scale = target_width / png_image.width
+            height_scale = target_height / png_image.height
+            # Use the smaller scaling factor to ensure the entire image fits within the target size
+            scale = min(width_scale, height_scale)
+            # Resize the image
+            png_image = png_image.resize((int(png_image.width * scale), int(png_image.height * scale)), Image.LANCZOS)  # Add Image.ANTIALIAS for better quality when downsizing
 
         # Get the position for pasting the PNG image
         image_x = image_properties.get('x', 0)
@@ -63,7 +72,7 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
         # Draw text on image
         draw.text((text_x, text_y), text, fill=font_color, font=font)
 
-        # Check if the current text file is the one to apply image mapping
+        # Check if the current text file is the one to
         if "title.txt" in os.path.basename(text_file):
             print(f"Text read from title.txt: {text}")  # Debug
             # Convert everything to lowercases
@@ -130,7 +139,7 @@ image_mapping = {
 }  # Dictionary containing text content and corresponding PNG image filenames
 
 image_data = {
-    "test.png": {"x": 0, "y": 255, "scale": 0.5},
+    "test.png": {"x": 0, "y": 255, "scale": 0.28},
     "canal+/canalp_2.png": {"x": 0, "y": 0, "scale": 1},
 
   #  "tlo.png": {"x": 35, "y": 1150, "scale": 10},
