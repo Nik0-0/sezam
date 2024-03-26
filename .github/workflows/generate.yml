@@ -49,7 +49,7 @@ jobs:
           curl -L https://limsezam.ovh/input/c3.txt -o gen/sub3.txt
           curl -L https://limsezam.ovh/input/c4.txt -o gen/text3.txt
 
-        else
+          else
 
          curl -L https://limsezam.ovh/input/input_0.txt -o gen/title.txt
          curl -L https://limsezam.ovh/input/input_1.txt -o gen/desc.txt
