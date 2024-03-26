@@ -66,14 +66,15 @@ jobs:
         run: |
          if grep -q "option1" gen/selected_option.txt; then
           python gen/laptop.py
-         else
-          
-          if grep -q "option2" gen/selected_option.txt; then
-           python gen/laptop_alt.py
-          else
-           python gen/laptop_prom.py
-          fi
 
+         if grep -q "option2" gen/selected_option.txt; then
+          python gen/laptop_alt.py
+
+         if grep -q "option3" gen/selected_option.txt; then
+          python gen/laptop_prom.py
+
+         if grep -q "canalp" gen/selected_option.txt; then
+          python gen/canalp.py
          fi
     # option1 - Klasyczny
     # option2 - Alternatywny 
