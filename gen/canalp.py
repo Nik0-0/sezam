@@ -96,9 +96,9 @@ text_files = {
     "sub1.txt": {"x": 100, "y": 275, "font_size": 60, "text_color": (255, 255, 255), "font_file": "canal+/canal1.ttf"},
     "text1.txt": {"x": 100, "y": 345, "font_size": 45, "text_color": (255, 255, 255), "font_file": "canal+/canal1.ttf"},
 
-    "././price.txt": {"x": 0, "y": 265, "font_size": 730, "text_color": (10, 10, 10), "font_file": "fonts/Ubuntu-B.ttf"},
-    "./price.txt": {"x": 150, "y": 405, "font_size": 500, "text_color": (255, 0, 0), "font_file": "fonts/Ubuntu-B.ttf"},
-    "price.txt": {"x": 120, "y": 375, "font_size": 500, "text_color": (255, 255, 255), "font_file": "fonts/Ubuntu-B.ttf"},
+    "././price.txt": {"x": 0, "y": 265, "font_size": 730, "text_color": (10, 10, 10), "font_file": "fonts/GOTHICB0.TTF"},
+    "./price.txt": {"x": 120, "y": 405, "font_size": 500, "text_color": (255, 0, 0), "font_file": "fonts/GOTHICB0.TTF"},
+    "price.txt": {"x": 100, "y": 375, "font_size": 500, "text_color": (255, 255, 255), "font_file": "fonts/GOTHICB0.TTF"},
 
     "default_1.txt": {"x": 680, "y": 825, "font_size": 40, "text_color": (255, 255, 255), "font_file": "fonts/Ubuntu-L.ttf"},
 
