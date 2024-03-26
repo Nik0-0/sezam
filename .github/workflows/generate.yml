@@ -69,9 +69,9 @@ jobs:
           curl -L https://limsezam.ovh/input/c1.txt -o gen/sub1.txt
           curl -L https://limsezam.ovh/input/c2.txt -o gen/text1.txt
 
-          curl -L https://limsezam.ovh/input/c3.txt -o gen/sub2.txt
-          curl -L https://limsezam.ovh/input/c4.txt -o gen/text2.txt
-                                        
+          curl -L https://limsezam.ovh/input/c3.txt -o gen/sub3.txt
+          curl -L https://limsezam.ovh/input/c4.txt -o gen/text3.txt
+
          fi
          
 
