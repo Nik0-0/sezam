@@ -42,7 +42,7 @@ jobs:
       - name: Download Files
         run: |
          curl -L https://limsezam.ovh/input/selected_option.txt -o gen/selected_option.txt
-         curl -L https://limsezam.ovh/input/ean_input.txt -o gen/ean_input.txt
+         curl -L https://limsezam.ovh/ean_input.txt -o gen/ean_input.txt
 
          if grep -q "canalp_2" gen/selected_option.txt; then
 
