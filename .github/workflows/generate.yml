@@ -34,11 +34,15 @@ jobs:
           python-version: '3.x' # Choose the appropriate Python version
 
       - name: Install dependencies
-        run: pip install Pillow # Install Pillow library
+        run: |
+         pip install Pillow
+         pip install python-barcode
+
 
       - name: Download Files
         run: |
          curl -L https://limsezam.ovh/input/selected_option.txt -o gen/selected_option.txt
+         curl -L https://limsezam.ovh/input/ean_input.txt -o gen/ean_input.txt
 
          if grep -q "canalp_2" gen/selected_option.txt; then
 

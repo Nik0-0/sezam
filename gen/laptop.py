@@ -1,8 +1,19 @@
 import os
 import html
 from PIL import Image, ImageDraw, ImageFont
+import barcode
 
-def generate_image_from_text_files(text_files, output_image, lines_y, image_mapping, image_data):
+ean_input_file = os.path.join(os.path.dirname(__file__), "ean_input.txt")
+with open(ean_input_file, 'r') as file:
+ ean_code = file.read().strip()
+
+ean_image = barcode.get_barcode_class('ean13')(ean_code, writer=barcode.writer.ImageWriter())
+temp_ean_file = os.path.join(os.path.dirname(__file__), "temp_ean")
+ean_image.save(temp_ean_file)  # Save EAN code as an image
+
+
+
+def generate_image_from_text_files(text_files, output_image, lines_y, image_mapping, image_data, ean_code):
     # Set up image parameters
     image_width = 870
     image_height = 1235
@@ -11,8 +22,6 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
     # Create new image
     image = Image.new("RGB", (image_width, image_height), background_color)
     draw = ImageDraw.Draw(image)
-    
-
 
     # Paste PNG images specified in the image_data dictionary
     for image_file, image_properties in image_data.items():
@@ -84,6 +93,31 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
     # Draw outline for better cutting etc...
     draw.rectangle([(0, 0), (image_width - 1, image_height - 1)], outline=(0, 0, 0))
 
+
+
+
+
+    # Open the EAN image
+    ean_image = Image.open("temp_ean.png")
+
+    # Define the scale factor
+    scale_factor = 0.5  # Adjust this value as needed
+
+    # Calculate the new size of the EAN image based on the scale factor
+    new_width = int(ean_image.width * scale_factor)
+    new_height = int(ean_image.height * scale_factor)
+
+    # Resize the EAN image
+    ean_image = ean_image.resize((new_width, new_height))
+
+    # Paste the resized EAN image onto the main image at position (5, 0)
+    image.paste(ean_image, (590, 1000))
+
+
+
+
+
+
     # Save image
     image.save(output_image)
     print("Image generated successfully!")
@@ -140,5 +174,12 @@ image_data = {
     "question.png": {"x": 17, "y": 797, "scale": 0.5},
 }  # Dictionary containing PNG image file paths and their properties
 
+
+
+    
+
+
 output_image_path = "laptop.png"  # Replace with the desired output image filename
-generate_image_from_text_files(text_files, output_image_path, lines_y, image_mapping, image_data)
+
+
+generate_image_from_text_files(text_files, output_image_path, lines_y, image_mapping, image_data, ean_code)
