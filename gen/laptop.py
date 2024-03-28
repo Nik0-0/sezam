@@ -98,7 +98,7 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
 
 
     # Open the EAN image
-    ean_image = Image.open("temp_ean.png")
+    ean_image = Image.open(os.path.join(os.path.dirname(__file__), "temp_ean.png"))
 
     # Define the scale factor
     scale_factor = 0.5  # Adjust this value as needed
