@@ -1,9 +1,9 @@
-1
-2
-3
-4
-5
-6
-7
-8
-9
+• Automatyczny Tryb Gry
+• Upłynniacz Ruchu
+• Funkcja Adaptacji Dźwięku
+• Q-Symphony
+• Dźwięk Podążający za Obiektem Lite
+• Wzmacniacz Kontrastu
+-
+-
+-

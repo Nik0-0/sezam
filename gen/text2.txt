@@ -1,1 +1,2 @@
-Przykład
+Realistyczne mapowanie kolorów
+Dynamiczny upscaling do 4K

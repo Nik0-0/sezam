@@ -1,1 +1,2 @@
-Przykład
+TizenOS
+Dostęp do grona aplikacji 

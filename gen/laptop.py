@@ -74,7 +74,7 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
                 png_image_file = os.path.join(os.path.dirname(__file__), image_mapping_lower[text.lower()])
                 # Open and paste the PNG image onto the image
                 png_image = Image.open(png_image_file)
-                image.paste(png_image, (35, 72))  # Adjust position as needed  | text_x + 150, text_y)
+                image.paste(png_image, (35, 35))  # Adjust position as needed  | text_x + 150, text_y)
 
     # Draw multiple horizontal lines
     for line_y in lines_y:
@@ -90,28 +90,29 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
 
 # Example usage:
 text_files = {
-    "title.txt": {"x": 170, "y": 70, "font_size": 80, "text_color": (0, 0, 0), "font_file": "us_heavy.otf"},
-    "desc.txt": {"x": 170, "y": 155, "font_size": 30, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
+    "title.txt": {"x": 170, "y": 40, "font_size": 80, "text_color": (0, 0, 0), "font_file": "us_heavy.otf"},
+    "desc.txt": {"x": 170, "y": 115, "font_size": 30, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
 
-    "sub1.txt": {"x": 100, "y": 215, "font_size": 70, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
-    "text1.txt": {"x": 100, "y": 300, "font_size": 35, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
+    "sub1.txt": {"x": 100, "y": 185, "font_size": 70, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
+    "text1.txt": {"x": 100, "y": 270, "font_size": 35, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
 
-    "sub2.txt": {"x": 100, "y": 405, "font_size": 70, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
-    "text2.txt": {"x": 100, "y": 500, "font_size": 35, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
+    "sub2.txt": {"x": 100, "y": 385, "font_size": 70, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
+    "text2.txt": {"x": 100, "y": 470, "font_size": 35, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
 
-    "sub3.txt": {"x": 100, "y": 605, "font_size": 70, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
-    "text3.txt": {"x": 100, "y": 700, "font_size": 35, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
+    "sub3.txt": {"x": 100, "y": 585, "font_size": 70, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
+    "text3.txt": {"x": 100, "y": 670, "font_size": 35, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
 
-    "text4.txt": {"x": 100, "y": 835, "font_size": 35, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
+    "text4.txt": {"x": 100, "y": 805, "font_size": 25, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
 
 
+    "zl_brutto.txt": {"x": 650, "y": 1150, "font_size": 50, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-M.ttf"},
+    "price.txt": {"x": 50, "y": 1050, "font_size": 150, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-M.ttf"},
 
-    "price.txt": {"x": 50, "y": 1150, "font_size": 70, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-M.ttf"},
 
 
 }  # Dictionary containing text file paths and their properties
 
-lines_y = [205,390,590,790]  # List of y-coordinates for the lines
+lines_y = [175,375,575,775]  # List of y-coordinates for the lines
 
 image_mapping = {
     "HP": "HP.png",  # Mapping text content to PNG image filename
@@ -128,15 +129,15 @@ image_mapping = {
 }  # Dictionary containing text content and corresponding PNG image filenames
 
 image_data = {
-    "logo.png": {"x": 500, "y": 82, "scale": 0.4},
-    "tlo1.png": {"x": 35, "y": 72, "scale": 1},
-    "tlo.png": {"x": 35, "y": 1150, "scale": 10},
+    "logo.png": {"x": 500, "y": 42, "scale": 0.4},
+    "tlo1.png": {"x": 35, "y": 33, "scale": 1},
+    "tlo.png": {"x": 35, "y": 1040, "scale": 10},
 
 
-    "check.png": {"x": 17, "y": 227, "scale": 0.5},
-    "check2.png": {"x": 17, "y": 417, "scale": 0.5},
-    "check3.png": {"x": 17, "y": 617, "scale": 0.5},
-    "question.png": {"x": 17, "y": 817, "scale": 0.5},
+    "check.png": {"x": 17, "y": 197, "scale": 0.5},
+    "check2.png": {"x": 17, "y": 397, "scale": 0.5},
+    "check3.png": {"x": 17, "y": 597, "scale": 0.5},
+    "question.png": {"x": 17, "y": 797, "scale": 0.5},
 }  # Dictionary containing PNG image file paths and their properties
 
 output_image_path = "laptop.png"  # Replace with the desired output image filename
