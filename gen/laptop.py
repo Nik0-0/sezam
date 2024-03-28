@@ -90,16 +90,16 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
 
 # Example usage:
 text_files = {
-    "title.txt": {"x": 170, "y": 40, "font_size": 80, "text_color": (0, 0, 0), "font_file": "us_heavy.otf"},
-    "desc.txt": {"x": 170, "y": 115, "font_size": 30, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
+    "title.txt": {"x": 170, "y": 35, "font_size": 85, "text_color": (0, 0, 0), "font_file": "us_heavy.otf"},
+    "desc.txt": {"x": 170, "y": 110, "font_size": 40, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
 
-    "sub1.txt": {"x": 100, "y": 185, "font_size": 70, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
+    "sub1.txt": {"x": 100, "y": 190, "font_size": 55, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
     "text1.txt": {"x": 100, "y": 270, "font_size": 35, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
 
-    "sub2.txt": {"x": 100, "y": 385, "font_size": 70, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
+    "sub2.txt": {"x": 100, "y": 390, "font_size": 55, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
     "text2.txt": {"x": 100, "y": 470, "font_size": 35, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
 
-    "sub3.txt": {"x": 100, "y": 585, "font_size": 70, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
+    "sub3.txt": {"x": 100, "y": 590, "font_size": 55, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
     "text3.txt": {"x": 100, "y": 670, "font_size": 35, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
 
     "text4.txt": {"x": 100, "y": 805, "font_size": 25, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
@@ -129,7 +129,7 @@ image_mapping = {
 }  # Dictionary containing text content and corresponding PNG image filenames
 
 image_data = {
-    "logo.png": {"x": 500, "y": 42, "scale": 0.4},
+    "logo.png": {"x": 525, "y": 42, "scale": 0.4},
     "tlo1.png": {"x": 35, "y": 33, "scale": 1},
     "tlo.png": {"x": 35, "y": 1040, "scale": 10},
 
