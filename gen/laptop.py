@@ -90,8 +90,7 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
         draw.line([(0, line_y), (image_width, line_y)], fill=(0, 0, 0), width=2)  # Adjust line properties as needed
 
 
-    # Draw outline for better cutting etc...
-    draw.rectangle([(0, 0), (image_width - 1, image_height - 1)], outline=(0, 0, 0))
+
 
 
 
@@ -115,7 +114,8 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
 
 
 
-
+    # Draw outline for better cutting etc...
+    draw.rectangle([(0, 0), (image_width - 1, image_height - 1)], outline=(0, 0, 0))
 
 
     # Save image

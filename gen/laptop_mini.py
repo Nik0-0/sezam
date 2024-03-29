@@ -12,8 +12,8 @@ ean_image.save(temp_ean_file)  # Save EAN code as an image
 
 def generate_image_from_text_files(text_files, output_image, lines_y, image_mapping, image_data):
     # Set up image parameters
-    image_width = 870
-    image_height = 1235
+    image_width = 1239
+    image_height = 416
     background_color = (255, 255, 255)  # White
 
     # Create new image
@@ -84,13 +84,14 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
     for line_y in lines_y:
         draw.line([(0, line_y), (image_width, line_y)], fill=(0, 0, 0), width=2)  # Adjust line properties as needed
 
-
+    # Draw outline for better cutting etc...
+    draw.rectangle([(0, 0), (image_width - 1, image_height - 1)], outline=(0, 0, 0))
 
     # Open the EAN image
     ean_image = Image.open(os.path.join(os.path.dirname(__file__), "temp_ean.png"))
 
     # Define the scale factor
-    scale_factor = 0.5  # Adjust this value as needed
+    scale_factor = 0.35  # Adjust this value as needed
 
     # Calculate the new size of the EAN image based on the scale factor
     new_width = int(ean_image.width * scale_factor)
@@ -100,11 +101,8 @@ def generate_image_from_text_files(text_files, output_image, lines_y, image_mapp
     ean_image = ean_image.resize((new_width, new_height))
 
     # Paste the resized EAN image onto the main image at position (5, 0)
-    image.paste(ean_image, (590, 1000))
+    image.paste(ean_image, (1055, 210))
 
-    # Draw outline for better cutting etc...
-    draw.rectangle([(0, 0), (image_width - 1, image_height - 1)], outline=(0, 0, 0))
-    
     # Save image
     image.save(output_image)
     print("Image generated successfully!")
@@ -114,20 +112,20 @@ text_files = {
     "title.txt": {"x": 170, "y": 35, "font_size": 85, "text_color": (0, 0, 0), "font_file": "us_heavy.otf"},
     "desc.txt": {"x": 170, "y": 110, "font_size": 40, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
 
-    "sub1.txt": {"x": 100, "y": 190, "font_size": 55, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
-    "text1.txt": {"x": 100, "y": 270, "font_size": 35, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
+    "sub1.txt": {"x": 20, "y": 190, "font_size": 55, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
+    "text1.txt": {"x": 20, "y": 270, "font_size": 35, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
 
-    "sub2.txt": {"x": 100, "y": 390, "font_size": 55, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
-    "text2.txt": {"x": 100, "y": 470, "font_size": 35, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
+   # "sub2.txt": {"x": 100, "y": 390, "font_size": 55, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
+   # "text2.txt": {"x": 100, "y": 470, "font_size": 35, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
 
-    "sub3.txt": {"x": 100, "y": 590, "font_size": 55, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
-    "text3.txt": {"x": 100, "y": 670, "font_size": 35, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
+   # "sub3.txt": {"x": 100, "y": 590, "font_size": 55, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-L.ttf"},
+   # "text3.txt": {"x": 100, "y": 670, "font_size": 35, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
 
-    "text4.txt": {"x": 100, "y": 805, "font_size": 25, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
+   # "text4.txt": {"x": 100, "y": 805, "font_size": 25, "text_color": (0, 0, 0), "font_file": "us_thin.otf"},
 
 
-    "zl_brutto.txt": {"x": 650, "y": 1150, "font_size": 50, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-M.ttf"},
-    "price.txt": {"x": 50, "y": 1075, "font_size": 150, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-M.ttf"},
+    "zl_brutto.txt": {"x": 990, "y": 350, "font_size": 50, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-M.ttf"},
+    "price.txt": {"x": 690, "y": 220, "font_size": 130, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-M.ttf"},
     "promotion.txt": {"x": 50, "y": 1035, "font_size": 55, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-M.ttf"},
 
 
@@ -135,7 +133,7 @@ text_files = {
 
 }  # Dictionary containing text file paths and their properties
 
-lines_y = [175,375,575,775]  # List of y-coordinates for the lines
+lines_y = [175]  # List of y-coordinates for the lines
 
 image_mapping = {
     "HP": "HP.png",  # Mapping text content to PNG image filename
@@ -152,15 +150,15 @@ image_mapping = {
 }  # Dictionary containing text content and corresponding PNG image filenames
 
 image_data = {
-    "logo.png": {"x": 525, "y": 42, "scale": 0.4},
+    "logo.png": {"x": 890, "y": 42, "scale": 0.4},
     "tlo1.png": {"x": 35, "y": 33, "scale": 1},
-    "tlo.png": {"x": 35, "y": 1040, "scale": 10},
+   # "tlo.png": {"x": 35, "y": 1040, "scale": 10},
 
 
-    "check.png": {"x": 17, "y": 197, "scale": 0.5},
-    "check2.png": {"x": 17, "y": 397, "scale": 0.5},
-    "check3.png": {"x": 17, "y": 597, "scale": 0.5},
-    "question.png": {"x": 17, "y": 797, "scale": 0.5},
+   # "check.png": {"x": 17, "y": 197, "scale": 0.5},
+   # "check2.png": {"x": 17, "y": 397, "scale": 0.5},
+   # "check3.png": {"x": 17, "y": 597, "scale": 0.5},
+   # "question.png": {"x": 17, "y": 797, "scale": 0.5},
 }  # Dictionary containing PNG image file paths and their properties
 
 output_image_path = "laptop.png"  # Replace with the desired output image filename
