@@ -126,7 +126,7 @@ text_files = {
 
     "zl_brutto.txt": {"x": 990, "y": 350, "font_size": 50, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-M.ttf"},
     "price.txt": {"x": 690, "y": 220, "font_size": 130, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-M.ttf"},
-    "promotion.txt": {"x": 50, "y": 1035, "font_size": 55, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-M.ttf"},
+    # "promotion.txt": {"x": 50, "y": 1035, "font_size": 55, "text_color": (0, 0, 0), "font_file": "fonts/Ubuntu-M.ttf"},
 
 
 
