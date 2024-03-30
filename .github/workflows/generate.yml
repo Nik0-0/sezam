@@ -133,6 +133,11 @@ jobs:
          if grep -q "option3" gen/selected_option.txt; then
           python gen/laptop_prom.py
          fi
+         
+         if grep -q "option4" gen/selected_option.txt; then
+          python gen/laptop_mini.py
+         fi         
+                 
 
          if grep -q "canalp" gen/selected_option.txt; then
           python gen/canalp.py
