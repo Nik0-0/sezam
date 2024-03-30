@@ -1,4 +1,4 @@
-<form method="post" action="">
+<form method="post" action="" enctype="multipart/form-data">
     <label for="select_option">Styl:</label><br>
     <select id="select_option" name="select_option" style="width: 200px;" onchange="showAdditionalInputs()">
         <option value="option1">Klasyczny</option>
@@ -8,9 +8,9 @@
         <option value="option4">Mini</option>
         <option value="option5">Telefony</option>
         
-        <option value="canalp">Canal+</option>
+        <option value="canalp_0">Canal+</option>
         <option value="canalp_1">Canal+ | 1</option>
-        <option value="canalp_2">Canal+ | IMG</option>
+		<option value="canalp_2">Canal+ | IMG</option>
     </select><br>
 	
 
@@ -32,6 +32,10 @@
 
 	</div>
 	
+
+
+    <div id="simple_form" style="display: block;">
+
 	<h1>  </h1>	
     <label for="user_input1">Tytuł (np HP):</label><br>
     <input type="text" id="user_input1" name="user_input[]" style="width: 200px;"><br>
@@ -43,6 +47,10 @@
     <input type="text" id="user_input3" name="user_input[]" style="width: 200px;"><br>
     <label for="user_input4">Opis 1:</label><br>
     <textarea id="user_input4" name="user_input[]" rows="2" cols="35"></textarea><br>
+
+    </div>
+
+
     <h2>  </h2>
     <label for="user_input5">Wyróżnienie 2:</label><br>
     <input type="text" id="user_input5" name="user_input[]" style="width: 200px;"><br>
@@ -96,16 +104,16 @@
         <input type="text" id="c_subtitle" name="c_subtitle" style="width: 200px;"><br>
         <h2>  </h2>
 
-        <label for="c1">Wyróżnienie 1 (Nad Ceną):</label><br>
-        <input type="text" id="c1" name="c1" style="width: 200px;"><br>
-        <label for="c2">Opis 1:</label><br>
-        <textarea id="c2" name="c2" rows="2" cols="35"></textarea><br>
+        <label for="c1_classic">Wyróżnienie 1 (Nad Ceną):</label><br>
+        <input type="text" id="c1_classic" name="c1_classic" style="width: 200px;"><br>
+        <label for="c2_classic">Opis 1:</label><br>
+        <textarea id="c2_classic" name="c2_classic" rows="2" cols="35"></textarea><br>
 
         <h2>  </h2>
-        <label for="c3">Wyróżnienie 2 (Pod Ceną):</label><br>
-        <input type="text" id="c3" name="c3" style="width: 200px;"><br>
-        <label for="user_input8">Opis 2:</label><br>
-        <textarea id="c4" name="c4" rows="2" cols="35"></textarea><br>
+        <label for="c3_classic">Wyróżnienie 2 (Pod Ceną):</label><br>
+        <input type="text" id="c3_classic" name="c3_classic" style="width: 200px;"><br>
+        <label for="c4_classic">Opis 2:</label><br>
+        <textarea id="c4_classic" name="c4_classic" rows="2" cols="35"></textarea><br>
         <h2>  </h2>
 
         
@@ -137,8 +145,34 @@
 
         
     </div>
+	
+	
+    <div id="canal_input_image" style="display: none;">
+	
+	
+	<p><em>Styl Canal+ Prosty bez ceny</em></p>
 
 
+
+
+	<label for="c1_img">Wyróżnienie 1 (Góra):</label><br>
+    <input type="text" id="c1_img" name="c1_img" style="width: 200px;"><br>
+    <label for="c2_img">Opis 1:</label><br>
+    <textarea id="c2_img" name="c2_img" rows="2" cols="35"></textarea><br>
+	
+	
+	<label for="c3_img">Wyróżnienie 2 (Dół):</label><br>
+    <input type="text" id="c3_img" name="c3_img" style="width: 200px;"><br>
+    <label for="c4_img">Opis 2:</label><br>
+    <textarea id="c4_img" name="c4_img" rows="2" cols="35"></textarea><br>
+	
+	
+	<label for="img_cp">Zdjęcie:</label><br>
+	<input type="file" id="img_cp" name="img_cp"><br>
+        
+    </div>
+	
+	
 
 	<h1>  </h1>	
     <label for="price">Cena:</label><br>
