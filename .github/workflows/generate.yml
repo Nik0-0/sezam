@@ -179,8 +179,8 @@ jobs:
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
           port: 21
-          local-dir: './laptop.png'
-          server-dir: "/generated/laptop.png"
+          local-dir: './laptop/'
+          server-dir: "/generated/"
 
 
 
@@ -211,8 +211,8 @@ jobs:
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
           port: 21
-          local-dir: './tv.png'
-          server-dir: "/generated/tv.png"
+          local-dir: './tv/'
+          server-dir: "/generated/"
 
 
             
@@ -239,6 +239,6 @@ jobs:
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
           port: 21
-          local-dir: './a4.png'
-          server-dir: "/generated/a4.png"
+          local-dir: './a4/'
+          server-dir: "/generated/"
 
