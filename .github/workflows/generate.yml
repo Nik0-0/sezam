@@ -169,7 +169,7 @@ jobs:
             port: 21
             local_path: './laptop.png'
             remote_path: '/generated/laptop.png'
-            sftp_only: true
+            sftp_only: false
             password: ${{ secrets.SFTP_PASSWORD }}
 
 
@@ -194,7 +194,7 @@ jobs:
             port: 21
             local_path: './tv.png'
             remote_path: '/generated/tv.png'
-            sftp_only: true
+            sftp_only: false
             password: ${{ secrets.SFTP_PASSWORD }}
 
 
@@ -209,6 +209,6 @@ jobs:
             port: 21
             local_path: './a4.png'
             remote_path: '/generated/a4.png'
-            sftp_only: true
+            sftp_only: false
             password: ${{ secrets.SFTP_PASSWORD }}
 
