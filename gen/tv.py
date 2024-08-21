@@ -12,7 +12,7 @@ def upscale_image(input_image_path, output_image_path, target_size):
 
 
 input_image_path = "laptop.png"
-output_image_path = "tv.png"
+output_image_path = "/tv/tv.png"
 target_size = (1279, 1732)
 
 upscale_image(input_image_path, output_image_path, target_size)
