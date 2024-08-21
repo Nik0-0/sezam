@@ -161,19 +161,26 @@ jobs:
           path: laptop.png
 
 
-      - name: Upload Small
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      # - name: Upload Small
+      #   uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      #   with:
+      #       username: ${{ secrets.SFTP_USERNAME }}
+      #       server: ${{ secrets.SFTP_SERVER }}
+      #       port: 21
+      #       local_path: './laptop.png'
+      #       remote_path: '/generated/laptop.png'
+      #       sftp_only: false
+      #       password: ${{ secrets.SFTP_PASSWORD }}
+
+      - name: SFTP Deploy - Small
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-            username: ${{ secrets.SFTP_USERNAME }}
-            server: ${{ secrets.SFTP_SERVER }}
-            port: 21
-            local_path: './laptop.png'
-            remote_path: '/generated/laptop.png'
-            sftp_only: false
-            password: ${{ secrets.SFTP_PASSWORD }}
-
-
-
+          server: ${{ secrets.SFTP_SERVER }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: 21
+          local-dir: './laptop.png'
+          server-dir: "/generated/laptop.png"
 
 
 
@@ -186,29 +193,52 @@ jobs:
       - name: Generate Images - Med (TV)
         run: python gen/tv.py
 
-      - name: Upload Med
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      # - name: Upload Med
+      #   uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      #   with:
+      #       username: ${{ secrets.SFTP_USERNAME }}
+      #       server: ${{ secrets.SFTP_SERVER }}
+      #       port: 21
+      #       local_path: './tv.png'
+      #       remote_path: '/generated/tv.png'
+      #       sftp_only: false
+      #       password: ${{ secrets.SFTP_PASSWORD }}
+
+      - name: SFTP Deploy - Med
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-            username: ${{ secrets.SFTP_USERNAME }}
-            server: ${{ secrets.SFTP_SERVER }}
-            port: 21
-            local_path: './tv.png'
-            remote_path: '/generated/tv.png'
-            sftp_only: false
-            password: ${{ secrets.SFTP_PASSWORD }}
+          server: ${{ secrets.SFTP_SERVER }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: 21
+          local-dir: './tv.png'
+          server-dir: "/generated/tv.png"
+
+
+            
 
 
       - name: Generate Images - Big (A4)
         run: python gen/a4.py
 
-      - name: Upload A4
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      # - name: Upload A4
+      #   uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      #   with:
+      #       username: ${{ secrets.SFTP_USERNAME }}
+      #       server: ${{ secrets.SFTP_SERVER }}
+      #       port: 21
+      #       local_path: './a4.png'
+      #       remote_path: '/generated/a4.png'
+      #       sftp_only: false
+      #       password: ${{ secrets.SFTP_PASSWORD }}
+
+      - name: SFTP Deploy - A4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-            username: ${{ secrets.SFTP_USERNAME }}
-            server: ${{ secrets.SFTP_SERVER }}
-            port: 21
-            local_path: './a4.png'
-            remote_path: '/generated/a4.png'
-            sftp_only: false
-            password: ${{ secrets.SFTP_PASSWORD }}
+          server: ${{ secrets.SFTP_SERVER }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          port: 21
+          local-dir: './a4.png'
+          server-dir: "/generated/a4.png"
 
