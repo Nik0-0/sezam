@@ -166,9 +166,9 @@ jobs:
         with:
             username: ${{ secrets.SFTP_USERNAME }}
             server: ${{ secrets.SFTP_SERVER }}
-            port: 22
+            port: 21
             local_path: './laptop.png'
-            remote_path: '/public/generated/laptop.png'
+            remote_path: '/generated/laptop.png'
             sftp_only: true
             password: ${{ secrets.SFTP_PASSWORD }}
 
@@ -191,9 +191,9 @@ jobs:
         with:
             username: ${{ secrets.SFTP_USERNAME }}
             server: ${{ secrets.SFTP_SERVER }}
-            port: 22
+            port: 21
             local_path: './tv.png'
-            remote_path: '/public/generated/tv.png'
+            remote_path: '/generated/tv.png'
             sftp_only: true
             password: ${{ secrets.SFTP_PASSWORD }}
 
@@ -206,9 +206,9 @@ jobs:
         with:
             username: ${{ secrets.SFTP_USERNAME }}
             server: ${{ secrets.SFTP_SERVER }}
-            port: 22
+            port: 21
             local_path: './a4.png'
-            remote_path: '/public/generated/a4.png'
+            remote_path: '/generated/a4.png'
             sftp_only: true
             password: ${{ secrets.SFTP_PASSWORD }}
 
