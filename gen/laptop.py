@@ -179,7 +179,7 @@ image_data = {
     
 
 
-output_image_path = "/laptop/laptop.png"  # Replace with the desired output image filename
+output_image_path = "laptop.png"  # Replace with the desired output image filename
 
 
 generate_image_from_text_files(text_files, output_image_path, lines_y, image_mapping, image_data, ean_code)

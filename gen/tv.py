@@ -11,8 +11,8 @@ def upscale_image(input_image_path, output_image_path, target_size):
     resized_image.save(output_image_path)
 
 
-input_image_path = "/laptop/laptop.png"
-output_image_path = "/tv/tv.png"
+input_image_path = "laptop.png"
+output_image_path = "tv.png"
 target_size = (1279, 1732)
 
 upscale_image(input_image_path, output_image_path, target_size)
