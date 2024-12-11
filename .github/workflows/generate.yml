@@ -41,20 +41,20 @@ jobs:
 
       - name: Download Files
         run: |
-         curl -L https://limsezam.ovh/input/selected_option.txt -o gen/selected_option.txt
-         curl -L https://limsezam.ovh/ean_input.txt -o gen/ean_input.txt
+         curl -L https://legacy.limsezam.ovh/input/selected_option.txt -o gen/selected_option.txt
+         curl -L https://legacy.limsezam.ovh/ean_input.txt -o gen/ean_input.txt
 
          if grep -q "canalp_2" gen/selected_option.txt; then
 
          echo "Canal | IMG style!"
 
-         curl -L https://limsezam.ovh/input/temp.png -o gen/test.png
+         curl -L https://legacy.limsezam.ovh/input/temp.png -o gen/test.png
 
-         curl -L https://limsezam.ovh/input/c1_i.txt -o gen/sub1.txt
-         curl -L https://limsezam.ovh/input/c2_i.txt -o gen/text1.txt
+         curl -L https://legacy.limsezam.ovh/input/c1_i.txt -o gen/sub1.txt
+         curl -L https://legacy.limsezam.ovh/input/c2_i.txt -o gen/text1.txt
 
-         curl -L https://limsezam.ovh/input/c3_i.txt -o gen/sub3.txt
-         curl -L https://limsezam.ovh/input/c4_i.txt -o gen/text3.txt
+         curl -L https://legacy.limsezam.ovh/input/c3_i.txt -o gen/sub3.txt
+         curl -L https://legacy.limsezam.ovh/input/c4_i.txt -o gen/text3.txt
 
          fi
 
@@ -62,11 +62,11 @@ jobs:
 
          echo "Canal | MODERN style!"
 
-         curl -L https://limsezam.ovh/input/c1.txt -o gen/sub1.txt
-         curl -L https://limsezam.ovh/input/c2.txt -o gen/text1.txt
+         curl -L https://legacy.limsezam.ovh/input/c1.txt -o gen/sub1.txt
+         curl -L https://legacy.limsezam.ovh/input/c2.txt -o gen/text1.txt
 
-         curl -L https://limsezam.ovh/input/c3.txt -o gen/sub3.txt
-         curl -L https://limsezam.ovh/input/c4.txt -o gen/text3.txt
+         curl -L https://legacy.limsezam.ovh/input/c3.txt -o gen/sub3.txt
+         curl -L https://legacy.limsezam.ovh/input/c4.txt -o gen/text3.txt
 
          fi
         
@@ -74,16 +74,16 @@ jobs:
 
          echo "Canal | CLASSIC style!"
 
-          curl -L https://limsezam.ovh/input/c_title.txt -o gen/title.txt
-          curl -L https://limsezam.ovh/input/c_subtitle.txt -o gen/desc.txt
+          curl -L https://legacy.limsezam.ovh/input/c_title.txt -o gen/title.txt
+          curl -L https://legacy.limsezam.ovh/input/c_subtitle.txt -o gen/desc.txt
 
-          curl -L https://limsezam.ovh/input/c1_c.txt -o gen/sub1.txt
-          curl -L https://limsezam.ovh/input/c2_c.txt -o gen/text1.txt
+          curl -L https://legacy.limsezam.ovh/input/c1_c.txt -o gen/sub1.txt
+          curl -L https://legacy.limsezam.ovh/input/c2_c.txt -o gen/text1.txt
 
-          curl -L https://limsezam.ovh/input/c3_c.txt -o gen/sub3.txt
-          curl -L https://limsezam.ovh/input/c4_c.txt -o gen/text3.txt
+          curl -L https://legacy.limsezam.ovh/input/c3_c.txt -o gen/sub3.txt
+          curl -L https://legacy.limsezam.ovh/input/c4_c.txt -o gen/text3.txt
 
-          curl -L https://limsezam.ovh/input/price.txt -o gen/price.txt
+          curl -L https://legacy.limsezam.ovh/input/price.txt -o gen/price.txt
 
          fi
 
@@ -93,27 +93,27 @@ jobs:
 
          echo "Normal render"
 
-         curl -L https://limsezam.ovh/input/input_0.txt -o gen/title.txt
-         curl -L https://limsezam.ovh/input/input_1.txt -o gen/desc.txt
+         curl -L https://legacy.limsezam.ovh/input/input_0.txt -o gen/title.txt
+         curl -L https://legacy.limsezam.ovh/input/input_1.txt -o gen/desc.txt
 
-         curl -L https://limsezam.ovh/input/input_2.txt -o gen/sub1.txt
-         curl -L https://limsezam.ovh/input/input_3.txt -o gen/text1.txt
+         curl -L https://legacy.limsezam.ovh/input/input_2.txt -o gen/sub1.txt
+         curl -L https://legacy.limsezam.ovh/input/input_3.txt -o gen/text1.txt
 
-         curl -L https://limsezam.ovh/input/input_4.txt -o gen/sub2.txt
-         curl -L https://limsezam.ovh/input/input_5.txt -o gen/text2.txt
+         curl -L https://legacy.limsezam.ovh/input/input_4.txt -o gen/sub2.txt
+         curl -L https://legacy.limsezam.ovh/input/input_5.txt -o gen/text2.txt
 
-         curl -L https://limsezam.ovh/input/input_6.txt -o gen/sub3.txt
-         curl -L https://limsezam.ovh/input/input_7.txt -o gen/text3.txt
+         curl -L https://legacy.limsezam.ovh/input/input_6.txt -o gen/sub3.txt
+         curl -L https://legacy.limsezam.ovh/input/input_7.txt -o gen/text3.txt
 
-         curl -L https://limsezam.ovh/input/input_8.txt -o gen/text4.txt
+         curl -L https://legacy.limsezam.ovh/input/input_8.txt -o gen/text4.txt
 
-         curl -L https://limsezam.ovh/input/price.txt -o gen/price.txt
+         curl -L https://legacy.limsezam.ovh/input/price.txt -o gen/price.txt
 
-         curl -L https://limsezam.ovh/input/promotion.txt -o gen/promotion.txt
+         curl -L https://legacy.limsezam.ovh/input/promotion.txt -o gen/promotion.txt
 
          
-         curl -L https://limsezam.ovh/input/extra5.txt -o gen/extra5.txt
-         curl -L https://limsezam.ovh/input/extra5_desc.txt -o gen/extra5_desc.txt
+         curl -L https://legacy.limsezam.ovh/input/extra5.txt -o gen/extra5.txt
+         curl -L https://legacy.limsezam.ovh/input/extra5_desc.txt -o gen/extra5_desc.txt
 
 
 
